@@ -1,0 +1,66 @@
+@import './variables.css';
+@import './index.css';
+
+.radio-panel {
+  min-height: 100vh;
+  text-align: center;
+  width: auto;
+  transition: background-color 1s ease;
+}
+
+.radio-panel input[type='radio'] {
+  display: none;
+}
+.radio-panel .label-radio {
+  margin: 0.3rem auto;
+  display: inline-flex;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.label-radio img {
+  display: block;
+  width: 64px;
+}
+
+@media (max-width: 600px) {
+  .label-radio img {
+    width: 32px;
+  }
+}
+.radio-panel input[id='dark'] + .label-radio {
+  border-radius: 28px 0 0 28px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  background: #efefef;
+}
+.radio-panel input[id='light'] + .label-radio {
+  border-radius: 0 28px 28px 0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  background: #efefef;
+}
+.radio-panel input[id='dark'] + .label-radio > img {
+  content: url('./icons/full-moon_64_d.png');
+}
+
+.radio-panel input[id='dark']:checked + .label-radio > img {
+  content: url('./icons/full-moon_64_l.png');
+}
+.radio-panel input[id='light'] + .label-radio > img {
+  content: url('./icons/sun_64_d.png');
+}
+
+.radio-panel input[id='light']:checked + .label-radio > img {
+  content: url('./icons/sun_64_l.png');
+}
+
+.radio-panel input[type='radio']:checked + .label-radio {
+  box-shadow: inset 0 1px 6px rgba(41, 41, 41, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  border-color: transparent;
+}
+
+.radio-panel input[type='radio'][id='light']:checked + .radio-panel {
+  --body-dark-bg: var(--body-white-bg);
+}

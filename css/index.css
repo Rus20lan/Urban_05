@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'dark font';
+  src: url(../font/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'light font';
+
+  src: url(../font/GaMaamli-Regular.ttf);
+}

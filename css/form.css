@@ -1,0 +1,111 @@
+@import './variables.css';
+@import './radio.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  color: var(--form-dark-color);
+  font-family: var(--form-dark-font);
+  background-color: var(--form-dark-bg);
+  padding: 20px 30px 20px 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--form-dark-bs);
+  transition: background-color 0.1s ease;
+}
+
+.wrapper h2 {
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom: var(--form-dark-border-bottom);
+  margin: -10px -30px 30px -30px;
+  text-align: left;
+}
+.wrapper h2 > span {
+  display: block;
+  font-size: 11px;
+}
+
+.wrapper label {
+  display: block;
+  margin: 0px 0px 5px;
+}
+
+.wrapper label > span {
+  float: left;
+  width: 28%;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  transition: font-size 0.3s ease;
+}
+
+.wrapper label > span:hover {
+  font-size: large;
+}
+
+.wrapper input[type='text'],
+.wrapper input[type='email'],
+.wrapper textarea {
+  border: none;
+  color: #525252;
+  height: 25px;
+  line-height: 15px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 5px 0px 5px 5px;
+  width: 70%;
+  border-radius: 2px;
+  background: #dfdfdf;
+}
+
+.wrapper textarea {
+  height: 100px;
+  padding: 5px 0px 0px 5px;
+  width: 70%;
+}
+
+.wrapper .button {
+  cursor: pointer;
+  display: block;
+  margin-left: 2px;
+  background: var(--form-dark-col-btn);
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: var(--form-dark-col-bth-text);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.button:hover {
+  color: #333;
+  background-color: #ebebeb;
+}
+.button:active {
+  transform: scale(0.98);
+}
+
+.radio-panel input[type='radio'][id='light']:checked ~ .wrapper {
+  --form-dark-bg: var(--form-light-bg);
+  --form-dark-border-bottom: var(--form-light-border-bottom);
+  --form-dark-bs: var(--form-light-bs);
+  --form-dark-font: var(--form-light-font);
+  --form-dark-color: var(--form-light-color);
+  --form-dark-col-btn: var(--form-light-col-btn);
+  --form-dark-col-bth-text: var(--form-dark-border-bottom);
+}

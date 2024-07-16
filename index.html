@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Form Page</title>
+  </head>
+  <body>
+    <div class="radio-panel">
+      <input id="dark" type="radio" name="theme" value="dark" checked />
+      <label for="dark" class="label-radio"><img alt="Dark" /></label>
+      <input id="light" type="radio" name="theme" value="light" />
+      <label for="light" class="label-radio"><img alt="Light" /></label>
+      <div class="wrapper">
+        <form action method="post">
+          <h2>
+            Contact Form
+            <span>Please fill all the texts in the fields</span>
+          </h2>
+          <label
+            ><span>Your Name:</span
+            ><input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+          /></label>
+          <label
+            ><span>Your Email:</span
+            ><input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Valid Email Address"
+          /></label>
+          <label>
+            <span>Message:</span>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message"
+            ></textarea>
+          </label>
+          <label>
+            <span>&nbsp</span>
+            <input type="button" class="button" value="Send" />
+          </label>
+        </form>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
